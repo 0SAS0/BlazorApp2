@@ -1,0 +1,84 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<head>
+    <link href="../../wwwroot/lib/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Mechanika Szymon niewiadomski</title>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <h1>Mechanika samochodowa Szymon Niewiadomski</h1>
+        <nav>
+            <ul>
+                <li><a href="#left">Usługi</a></li>
+                <li><a href="#right">O nas</a></li>
+                <li><a href="#Contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="content">
+        <div id="left">
+            <p>✅ Diagnostyka komputerowa Szybkie i dokładne sprawdzenie stanu technicznego pojazdu. Odczyt i kasowanie błędów z komputera pokładowego. Pracuję na nowoczesnym sprzęcie diagnostycznym. </p>
+            <p>✅ Wymiana oleju i filtrów Regularna wymiana oleju to podstawa długiej żywotności silnika. Wymieniam również filtry: oleju, powietrza, kabinowe i paliwa. </p>
+            <p>✅ Naprawa zawieszenia Zgrzyty, stuki lub niestabilne prowadzenie auta? Sprawdzam i naprawiam amortyzatory, sprężyny, wahacze, tuleje i inne elementy zawieszenia. </p>
+            <p>✅ Serwis klimatyzacji Oferuję nabijanie, odgrzybianie oraz diagnostykę układu klimatyzacji. Dbaj o świeże i zdrowe powietrze w samochodzie – szczególnie latem! </p>
+            <p>✅ Wulkanizacja i wymiana opon Szybka wymiana opon sezonowych, wyważanie kół, naprawa przebitych opon i kontrola ciśnienia. Możliwość przechowywania opon. </p>
+            <p>✅ Przegląd przed zakupem auta Nie kupuj kota w worku. Dokładnie sprawdzam stan techniczny samochodu przed zakupem – silnik, zawieszenie, elektronikę i historię błędów. </p>
+            <p>✅ Inne usługi Wymiana klocków i tarcz hamulcowych Serwis układu wydechowego Naprawy bieżące i awaryjne Obsługa układu chłodzenia Przeglądy okresowe</p>
+        </div>
+        <div id="right">
+            <p>Jestem niezależnym mechanikiem z pasją do motoryzacji. Od lat zajmuję się naprawą i serwisem samochodów osobowych oraz dostawczych. Dla mnie najważniejsze jest uczciwe podejście, dokładność i zadowolenie klienta.</p>
+            <p>Moim celem jest zapewnienie Ci bezpieczeństwa na drodze i sprawności Twojego auta – bez naciągania, zbędnych kosztów i z jasnym planem naprawy.</p>
+            <p> Dlaczego warto?</p>
+                🧰 Wieloletnie doświadczenie w branży
+                🔍 Indywidualne podejście do każdego auta
+                🚗 Praca na sprawdzonych częściach i narzędziach
+                ⭐ Setki zadowolonych klientów i pozytywnych opinii
+            <p>Zaufało mi już wielu kierowców – teraz kolej na Ciebie! </p>
+            Zapraszam do warsztatu i kontaktu.
+        </div>
+        <div id="Contact">
+            <form id="myForm">
+                <label for="imie">Imię</label>
+                <input type="text" name="imie" id="imie">
+                <label for="nazwisko">Nazwisko</label>
+                <input type="text" name="nazwisko" id="nazwisko">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+                <label for="numertelefonu">Numer Telefonu</label>
+                <input type="number" name="telefon" id="numertelefonu">
+                <label for="wiadomosc">Wiadomość</label>
+                <input type="text" name="wiadomosc" id="wiadomosc">
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+    <div id="footer">
+        <p>Copyright &copy; 2024 Szymon Niewiadomski 122861</p>
+    </div>
+</div>
+<script>
+    const form = document.getElementById('myForm');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var imie = document.getElementById("imie").value;
+        var nazwisko = document.getElementById("nazwisko").value;
+        var email = document.getElementById("email").value;
+        var numertelefon = document.getElementById("numertelefonu").value;
+        var wiadomosc = document.getElementById("wiadomosc").value;
+        if (imie.length > 1 && nazwisko.length > 1 && numertelefon.length >= 9 && email.includes("@@")) {
+            alert("Pomyślnie wysłano wiadomość: " + wiadomosc);
+        }else{
+            alert("Wystąpił błąd");
+        }
+
+    });
+
+
+
+</script>
+</body>
